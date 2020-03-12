@@ -87,6 +87,8 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate{
     
     @objc func continueButtonTapped(){
         print("continue")
+        let loginViewController: LoginViewController = LoginViewController()
+        self.navigationController?.pushViewController(loginViewController, animated: true)
     }
     
     func setPageControl(){
