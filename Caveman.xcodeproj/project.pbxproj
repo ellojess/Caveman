@@ -13,6 +13,7 @@
 		C044679C241AC8650019006E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C044679B241AC8650019006E /* Assets.xcassets */; };
 		C044679F241AC8650019006E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C044679D241AC8650019006E /* LaunchScreen.storyboard */; };
 		C04467AA241AD44F0019006E /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04467A9241AD44F0019006E /* OnboardingViewController.swift */; };
+		C04467AC241AE1C20019006E /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04467AB241AE1C20019006E /* OnboardingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C044679E241AC8650019006E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C04467A0241AC8650019006E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C04467A9241AD44F0019006E /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		C04467AB241AE1C20019006E /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +73,7 @@
 		C04467A6241AD3B20019006E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C04467A9241AD44F0019006E /* OnboardingViewController.swift */,
 				C0446796241AC8600019006E /* ViewController.swift */,
 			);
 			path = Controllers;
@@ -79,7 +82,7 @@
 		C04467A7241AD3BB0019006E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C04467A9241AD44F0019006E /* OnboardingViewController.swift */,
+				C04467AB241AE1C20019006E /* OnboardingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 				C0446797241AC8600019006E /* ViewController.swift in Sources */,
 				C0446793241AC8600019006E /* AppDelegate.swift in Sources */,
 				C0446795241AC8600019006E /* SceneDelegate.swift in Sources */,
+				C04467AC241AE1C20019006E /* OnboardingView.swift in Sources */,
 				C04467AA241AD44F0019006E /* OnboardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
