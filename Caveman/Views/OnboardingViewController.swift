@@ -7,3 +7,12 @@
 //
 
 import Foundation
+import UIKit
+
+class OnboardingViewController: UIViewController, UIScrollViewDelegate {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+}
