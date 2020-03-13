@@ -11,15 +11,6 @@ import UIKit
 
 class LoginViewController: UIViewController{
     
-    let titleLabel: UILabel = {
-        let title = UILabel()
-        title.font = UIFont(name: "MarkerFelt-Wide", size: 40)
-        title.text = "Caveman"
-        title.textColor = UIColor(red:0.95, green:0.95, blue:0.95, alpha:1.0)
-        title.textAlignment = .center
-        return title
-    }()
-    
     let stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
@@ -29,12 +20,28 @@ class LoginViewController: UIViewController{
         return stackView
     }()
     
-    let imageView: UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: "deadbunnyman"))
-        imageView.contentMode = .scaleToFill
-        imageView.translatesAutoresizingMaskIntoConstraints = true
-        return imageView
+    let titleLabel: UILabel = {
+        let title = UILabel()
+        title.font = UIFont(name: "MarkerFelt-Wide", size: 35)
+        title.text = "Find The One Now"
+        title.textColor = UIColor(red:0.95, green:0.95, blue:0.95, alpha:1.0)
+        title.textAlignment = .center
+        return title
     }()
+    
+    let manImageView: UIImageView = {
+        let manImageView = UIImageView(image: UIImage(named: "deadbunnyman"))
+        manImageView.contentMode = .scaleAspectFit
+        manImageView.translatesAutoresizingMaskIntoConstraints = false
+        return manImageView
+    }()
+    
+//    let boxImageView: UIImageView = {
+//        let boxImageView = UIImageView(image: UIImage(named: "box"))
+//        boxImageView.contentMode = .scaleAspectFit
+//        boxImageView.translatesAutoresizingMaskIntoConstraints = false
+//        return boxImageView
+//    }()
     
     let loginButton: UIButton = {
         let button = UIButton()
@@ -89,10 +96,15 @@ class LoginViewController: UIViewController{
         return passwordTextField
     }()
     
-    let box: UIImageView = {
-        let box = UIImageView(image: UIImage(named: "deadbunnyman"))
-        return box
+    let man: UIImageView = {
+        let man = UIImageView(image: UIImage(named: "deadbunnyman"))
+        return man
     }()
+    
+//    let box: UIImageView = {
+//        let box = UIImageView(image: UIImage(named: "box"))
+//        return box
+//    }()
     
     //MARK: Lifecycle
     override func viewDidLoad() {
@@ -105,8 +117,8 @@ class LoginViewController: UIViewController{
         
         self.view.addSubview(stackView)
         stackView.distribution = .fill
-        stackView.widthAnchor.constraint(equalTo: self.view.layoutMarginsGuide.widthAnchor, multiplier: 0.65).isActive = true
-        stackView.heightAnchor.constraint(equalTo: self.view.layoutMarginsGuide.heightAnchor, multiplier: 0.50).isActive = true
+        stackView.widthAnchor.constraint(equalTo: self.view.layoutMarginsGuide.widthAnchor, multiplier: 0.75).isActive = true
+        stackView.heightAnchor.constraint(equalTo: self.view.layoutMarginsGuide.heightAnchor, multiplier: 0.70).isActive = true
         stackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
         stackView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
 
@@ -118,8 +130,8 @@ class LoginViewController: UIViewController{
         
         titleLabel.widthAnchor.constraint(equalTo: stackView.widthAnchor).isActive = true
         
-        stackView.addArrangedSubview(box)
-        box.widthAnchor.constraint(equalTo: stackView.widthAnchor).isActive = true
+        stackView.addArrangedSubview(man)
+        man.widthAnchor.constraint(equalTo: stackView.widthAnchor).isActive = true
         
         stackView.addArrangedSubview(usernameTextField)
         
