@@ -22,8 +22,9 @@ class LoginViewController: UIViewController{
     
     let titleLabel: UILabel = {
         let title = UILabel()
-        title.font = UIFont(name: "MarkerFelt-Wide", size: 25)
-        title.text = "Find The One Now"
+        title.numberOfLines = 0
+        title.font = UIFont(name: "MarkerFelt-Wide", size: 27)
+        title.text = "On deMANd"
         title.textColor = UIColor(red:0.95, green:0.95, blue:0.95, alpha:1.0)
         title.textAlignment = .center
         return title
@@ -126,7 +127,6 @@ class LoginViewController: UIViewController{
         stackView.addArrangedSubview(titleLabel)
         
         titleLabel.heightAnchor.constraint(equalToConstant: 100).isActive = true
-        
         titleLabel.widthAnchor.constraint(equalTo: stackView.widthAnchor).isActive = true
         
         stackView.addArrangedSubview(man)
