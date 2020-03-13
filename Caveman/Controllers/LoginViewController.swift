@@ -37,13 +37,6 @@ class LoginViewController: UIViewController{
         return manImageView
     }()
     
-//    let boxImageView: UIImageView = {
-//        let boxImageView = UIImageView(image: UIImage(named: "box"))
-//        boxImageView.contentMode = .scaleAspectFit
-//        boxImageView.translatesAutoresizingMaskIntoConstraints = false
-//        return boxImageView
-//    }()
-    
     let loginButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -67,11 +60,10 @@ class LoginViewController: UIViewController{
         bottomLine.translatesAutoresizingMaskIntoConstraints = false
         bottomLine.backgroundColor = .white
         usernameTextField.addSubview(bottomLine)
-        bottomLine.topAnchor.constraint(equalTo: usernameTextField.bottomAnchor, constant: -8).isActive = true
+        bottomLine.topAnchor.constraint(equalTo: usernameTextField.bottomAnchor, constant: -10).isActive = true
         bottomLine.leadingAnchor.constraint(equalTo: usernameTextField.leadingAnchor).isActive = true
         bottomLine.trailingAnchor.constraint(equalTo: usernameTextField.trailingAnchor).isActive = true
         bottomLine.heightAnchor.constraint(equalToConstant: 1.0).isActive = true
-
         usernameTextField.translatesAutoresizingMaskIntoConstraints = false
         return usernameTextField
     }()
@@ -92,7 +84,6 @@ class LoginViewController: UIViewController{
         bottomLine.leadingAnchor.constraint(equalTo: passwordTextField.leadingAnchor).isActive = true
         bottomLine.trailingAnchor.constraint(equalTo: passwordTextField.trailingAnchor).isActive = true
         bottomLine.heightAnchor.constraint(equalToConstant: 1.0).isActive = true
-
         passwordTextField.translatesAutoresizingMaskIntoConstraints = false
         return passwordTextField
     }()
@@ -101,11 +92,6 @@ class LoginViewController: UIViewController{
         let man = UIImageView(image: UIImage(named: "deadbunnyman"))
         return man
     }()
-    
-//    let box: UIImageView = {
-//        let box = UIImageView(image: UIImage(named: "box"))
-//        return box
-//    }()
     
     //MARK: Lifecycle
     override func viewDidLoad() {
@@ -117,8 +103,8 @@ class LoginViewController: UIViewController{
     func setViews(){
         
         view.addSubview(stackView)
-        stackView.widthAnchor.constraint(equalTo: view.layoutMarginsGuide.widthAnchor, multiplier: 0.65).isActive = true
-        stackView.heightAnchor.constraint(equalTo: view.layoutMarginsGuide.heightAnchor, multiplier: 0.65).isActive = true
+        stackView.widthAnchor.constraint(equalTo: view.layoutMarginsGuide.widthAnchor, multiplier: 0.7).isActive = true
+        stackView.heightAnchor.constraint(equalTo: view.layoutMarginsGuide.heightAnchor, multiplier: 0.73).isActive = true
         stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
 
@@ -148,6 +134,9 @@ class LoginViewController: UIViewController{
         
         loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
     }
+    
+    // TODO: Animate title label
+
     
     @objc func loginButtonTapped(){
         print("logged in")
