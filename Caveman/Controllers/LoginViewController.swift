@@ -13,8 +13,8 @@ class LoginViewController: UIViewController{
     
     let titleLabel: UILabel = {
         let title = UILabel()
-        title.font = UIFont(name: "MarkerFelt-Wide", size: 60)
-        title.text = "Petbox"
+        title.font = UIFont(name: "MarkerFelt-Wide", size: 40)
+        title.text = "Caveman"
         title.textColor = UIColor(red:0.95, green:0.95, blue:0.95, alpha:1.0)
         title.textAlignment = .center
         return title
@@ -30,13 +30,13 @@ class LoginViewController: UIViewController{
     }()
     
     let imageView: UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: "box"))
-        imageView.contentMode = .center
+        let imageView = UIImageView(image: UIImage(named: "deadbunnyman"))
+        imageView.contentMode = .scaleToFill
         imageView.translatesAutoresizingMaskIntoConstraints = true
         return imageView
     }()
     
-    let loginBtn: UIButton = {
+    let loginButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setTitle("Login", for: .normal)
@@ -44,6 +44,7 @@ class LoginViewController: UIViewController{
         button.titleLabel?.font = UIFont(name: "AvenirNextCondensed-DemiBold", size: 18)
         button.backgroundColor = UIColor(red:0.97, green:0.97, blue:0.97, alpha:1.0)
         button.layer.cornerRadius = 10
+        button.layer.masksToBounds = true
         return button
     }()
     
@@ -89,7 +90,7 @@ class LoginViewController: UIViewController{
     }()
     
     let box: UIImageView = {
-        let box = UIImageView(image: UIImage(named: "box"))
+        let box = UIImageView(image: UIImage(named: "deadbunnyman"))
         return box
     }()
     
@@ -129,13 +130,12 @@ class LoginViewController: UIViewController{
         passwordTextField.widthAnchor.constraint(equalTo: stackView.widthAnchor).isActive = true
         passwordTextField.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
-        stackView.addArrangedSubview(loginBtn)
+        stackView.addArrangedSubview(loginButton)
         
-        loginBtn.widthAnchor.constraint(equalTo: stackView.widthAnchor).isActive = true
-        loginBtn.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        loginButton.widthAnchor.constraint(equalTo: stackView.widthAnchor).isActive = true
+        loginButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
-        loginBtn.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
-        
+        loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
     }
     
     
