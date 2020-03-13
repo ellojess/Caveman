@@ -22,7 +22,7 @@ class LoginViewController: UIViewController{
     
     let titleLabel: UILabel = {
         let title = UILabel()
-        title.font = UIFont(name: "MarkerFelt-Wide", size: 35)
+        title.font = UIFont(name: "MarkerFelt-Wide", size: 25)
         title.text = "Find The One Now"
         title.textColor = UIColor(red:0.95, green:0.95, blue:0.95, alpha:1.0)
         title.textAlignment = .center
@@ -114,13 +114,11 @@ class LoginViewController: UIViewController{
     }
     
     func setViews(){
-        
-        self.view.addSubview(stackView)
-        stackView.distribution = .fill
-        stackView.widthAnchor.constraint(equalTo: self.view.layoutMarginsGuide.widthAnchor, multiplier: 0.75).isActive = true
-        stackView.heightAnchor.constraint(equalTo: self.view.layoutMarginsGuide.heightAnchor, multiplier: 0.70).isActive = true
-        stackView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor).isActive = true
-        stackView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor).isActive = true
+        view.addSubview(stackView)
+        stackView.widthAnchor.constraint(equalTo: view.layoutMarginsGuide.widthAnchor, multiplier: 0.65).isActive = true
+        stackView.heightAnchor.constraint(equalTo: view.layoutMarginsGuide.heightAnchor, multiplier: 0.72).isActive = true
+        stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
 
         self.view.backgroundColor = UIColor(red:0.44, green:0.40, blue:1.00, alpha:1.0)
         
@@ -149,6 +147,8 @@ class LoginViewController: UIViewController{
         
         loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
     }
+    
+//    func
     
     
     @objc func loginButtonTapped(){

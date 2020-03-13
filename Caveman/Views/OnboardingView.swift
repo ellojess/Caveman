@@ -45,7 +45,7 @@ class OnboardingView: UIView {
     let bodyLabel: UILabel = {
         let bodyLabel = UILabel()
         bodyLabel.textAlignment = .center
-        bodyLabel.font = UIFont(name: "AvenirNextCondensed-DemiBold", size: 20)
+        bodyLabel.font = UIFont(name: "AvenirNextCondensed-DemiBold", size: 18)
         bodyLabel.textColor = UIColor(red:1.00, green:0.98, blue:0.99, alpha:1.0)
         bodyLabel.lineBreakMode = .byWordWrapping
         bodyLabel.numberOfLines = 0
@@ -90,7 +90,7 @@ class OnboardingView: UIView {
 
         stackView.distribution = .fill
         stackView.widthAnchor.constraint(equalTo: self.layoutMarginsGuide.widthAnchor, multiplier: 0.65).isActive = true
-        stackView.heightAnchor.constraint(equalTo: self.layoutMarginsGuide.heightAnchor, multiplier: 0.50).isActive = true
+        stackView.heightAnchor.constraint(equalTo: self.layoutMarginsGuide.heightAnchor, multiplier: 0.65).isActive = true
 
         stackView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         stackView .centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
