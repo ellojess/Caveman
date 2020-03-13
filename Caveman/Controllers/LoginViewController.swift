@@ -114,9 +114,10 @@ class LoginViewController: UIViewController{
     }
     
     func setViews(){
+        
         view.addSubview(stackView)
         stackView.widthAnchor.constraint(equalTo: view.layoutMarginsGuide.widthAnchor, multiplier: 0.65).isActive = true
-        stackView.heightAnchor.constraint(equalTo: view.layoutMarginsGuide.heightAnchor, multiplier: 0.72).isActive = true
+        stackView.heightAnchor.constraint(equalTo: view.layoutMarginsGuide.heightAnchor, multiplier: 0.65).isActive = true
         stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
 
@@ -147,9 +148,6 @@ class LoginViewController: UIViewController{
         
         loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
     }
-    
-//    func
-    
     
     @objc func loginButtonTapped(){
         print("logged in")
