@@ -18,6 +18,8 @@
 		C04467B1241CD96C0019006E /* FeaturedSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04467B0241CD96C0019006E /* FeaturedSection.swift */; };
 		C04467B3241CD97C0019006E /* TitleSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04467B2241CD97C0019006E /* TitleSection.swift */; };
 		C04467B5241CD98C0019006E /* FavoriteSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04467B4241CD98C0019006E /* FavoriteSection.swift */; };
+		C04467B7241CDA7E0019006E /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04467B6241CDA7E0019006E /* Section.swift */; };
+		C04467B9241CDBF50019006E /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04467B8241CDBF50019006E /* TitleCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		C04467B0241CD96C0019006E /* FeaturedSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedSection.swift; sourceTree = "<group>"; };
 		C04467B2241CD97C0019006E /* TitleSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSection.swift; sourceTree = "<group>"; };
 		C04467B4241CD98C0019006E /* FavoriteSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteSection.swift; sourceTree = "<group>"; };
+		C04467B6241CDA7E0019006E /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		C04467B8241CDBF50019006E /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				C04467AB241AE1C20019006E /* OnboardingView.swift */,
+				C04467B8241CDBF50019006E /* TitleCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -110,6 +115,7 @@
 				C04467B0241CD96C0019006E /* FeaturedSection.swift */,
 				C04467B2241CD97C0019006E /* TitleSection.swift */,
 				C04467B4241CD98C0019006E /* FavoriteSection.swift */,
+				C04467B6241CDA7E0019006E /* Section.swift */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
@@ -185,10 +191,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C04467AE241AEEC90019006E /* LoginViewController.swift in Sources */,
+				C04467B9241CDBF50019006E /* TitleCell.swift in Sources */,
 				C04467B5241CD98C0019006E /* FavoriteSection.swift in Sources */,
 				C0446797241AC8600019006E /* HomeViewController.swift in Sources */,
 				C0446793241AC8600019006E /* AppDelegate.swift in Sources */,
 				C0446795241AC8600019006E /* SceneDelegate.swift in Sources */,
+				C04467B7241CDA7E0019006E /* Section.swift in Sources */,
 				C04467B3241CD97C0019006E /* TitleSection.swift in Sources */,
 				C04467AC241AE1C20019006E /* OnboardingView.swift in Sources */,
 				C04467B1241CD96C0019006E /* FeaturedSection.swift in Sources */,
