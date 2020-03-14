@@ -15,6 +15,9 @@
 		C04467AA241AD44F0019006E /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04467A9241AD44F0019006E /* OnboardingViewController.swift */; };
 		C04467AC241AE1C20019006E /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04467AB241AE1C20019006E /* OnboardingView.swift */; };
 		C04467AE241AEEC90019006E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04467AD241AEEC90019006E /* LoginViewController.swift */; };
+		C04467B1241CD96C0019006E /* FeaturedSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04467B0241CD96C0019006E /* FeaturedSection.swift */; };
+		C04467B3241CD97C0019006E /* TitleSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04467B2241CD97C0019006E /* TitleSection.swift */; };
+		C04467B5241CD98C0019006E /* FavoriteSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04467B4241CD98C0019006E /* FavoriteSection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		C04467A9241AD44F0019006E /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		C04467AB241AE1C20019006E /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		C04467AD241AEEC90019006E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C04467B0241CD96C0019006E /* FeaturedSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedSection.swift; sourceTree = "<group>"; };
+		C04467B2241CD97C0019006E /* TitleSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleSection.swift; sourceTree = "<group>"; };
+		C04467B4241CD98C0019006E /* FavoriteSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,7 @@
 			children = (
 				C0446792241AC8600019006E /* AppDelegate.swift */,
 				C0446794241AC8600019006E /* SceneDelegate.swift */,
+				C04467AF241CD9210019006E /* Sections */,
 				C04467A8241AD3C30019006E /* Models */,
 				C04467A7241AD3BB0019006E /* Views */,
 				C04467A6241AD3B20019006E /* Controllers */,
@@ -95,6 +102,16 @@
 			children = (
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		C04467AF241CD9210019006E /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				C04467B0241CD96C0019006E /* FeaturedSection.swift */,
+				C04467B2241CD97C0019006E /* TitleSection.swift */,
+				C04467B4241CD98C0019006E /* FavoriteSection.swift */,
+			);
+			path = Sections;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,10 +185,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C04467AE241AEEC90019006E /* LoginViewController.swift in Sources */,
+				C04467B5241CD98C0019006E /* FavoriteSection.swift in Sources */,
 				C0446797241AC8600019006E /* HomeViewController.swift in Sources */,
 				C0446793241AC8600019006E /* AppDelegate.swift in Sources */,
 				C0446795241AC8600019006E /* SceneDelegate.swift in Sources */,
+				C04467B3241CD97C0019006E /* TitleSection.swift in Sources */,
 				C04467AC241AE1C20019006E /* OnboardingView.swift in Sources */,
+				C04467B1241CD96C0019006E /* FeaturedSection.swift in Sources */,
 				C04467AA241AD44F0019006E /* OnboardingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
