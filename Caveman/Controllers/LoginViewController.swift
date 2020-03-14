@@ -137,9 +137,16 @@ class LoginViewController: UIViewController{
     
     // TODO: Animate title label
 
+//    @objc func continueButtonTapped(){
+//        print("continue")
+//        let loginViewController: LoginViewController = LoginViewController()
+//        self.navigationController?.pushViewController(loginViewController, animated: true)
+//    }
     
     @objc func loginButtonTapped(){
-        print("logged in")
+        print("login pressed")
+        let homeViewController: HomeViewController = HomeViewController()
+        self.navigationController?.pushViewController(homeViewController, animated: true)
     }
     
     
