@@ -7,13 +7,14 @@
 //
 
 import Foundation
+import UIKit
 
 struct FeaturedSection: Section {
     var numberOfItems: Int = 4
     let images = ["artistman", "workoutman", "dancingman", "singingman", "bathman", "thumbsupman"]
     let headings = ["Artsy", "Active", "Happy Feet", "Serendipitous", "Spa Man", "Supportive"]
     
-    
+        
     func layoutSection() -> NSCollectionLayoutSection? {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.95), heightDimension: .fractionalHeight(1.0))
         
@@ -30,11 +31,15 @@ struct FeaturedSection: Section {
     }
     
     func configureCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
-//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FeaturedCell.identifier, for: indexPath) as! FeaturedCell
-//        cell.imgView.image = UIImage(named: images[indexPath.row])
-//        cell.textLabel.text = texts[indexPath.row]
+        
+        collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: FeaturedCell.self), for: indexPath)
+                
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FeaturedCell", for: indexPath) as! FeaturedCell
+        cell.backgroundColor = UIColor(red:0.44, green:0.43, blue:0.98, alpha:1.0)
+        cell.layer.cornerRadius = 10
+        // TODO: return cell with data
         return cell
+        
     }
-    
     
 }

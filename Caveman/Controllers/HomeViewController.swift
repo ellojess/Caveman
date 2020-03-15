@@ -8,8 +8,6 @@
 
 import UIKit
 
-import UIKit
-
 class HomeViewController: UIViewController, UICollectionViewDelegate{
     
 
@@ -17,7 +15,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate{
     
     lazy var sections: [Section] = [
         TitleSection(title: "Featured Categories"),
-        FavoriteSection(title: "Last months favorites")
+        FeaturedSection()
     ]
     
     lazy var collectionViewLayout: UICollectionViewLayout = {
@@ -54,9 +52,8 @@ class HomeViewController: UIViewController, UICollectionViewDelegate{
         
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: collectionViewLayout)
         collectionView.backgroundColor = UIColor.white
-//        collectionView.register(CustomCell.self, forCellWithReuseIdentifier: "CustomCell")
-//        collectionView.register(TitleCell.self, forCellWithReuseIdentifier: "TitleCell")
-//        collectionView.register(FavoritesCell.self, forCellWithReuseIdentifier: "FavoritesCell")
+        collectionView.register(FeaturedCell.self, forCellWithReuseIdentifier: "CustomCell")
+        collectionView.register(TitleCell.self, forCellWithReuseIdentifier: "TitleCell")
 
         
         collectionView.translatesAutoresizingMaskIntoConstraints = false
@@ -96,4 +93,3 @@ extension HomeViewController: UICollectionViewDataSource {
         
     }
 }
-
