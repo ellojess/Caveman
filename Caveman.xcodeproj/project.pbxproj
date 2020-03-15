@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0308163241E431400557CB7 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0308162241E431400557CB7 /* TabBarController.swift */; };
 		C036A9E5241DF90D002AFC54 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = C036A9E4241DF90D002AFC54 /* Box.swift */; };
 		C0446793241AC8600019006E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0446792241AC8600019006E /* AppDelegate.swift */; };
 		C0446795241AC8600019006E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0446794241AC8600019006E /* SceneDelegate.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C0308162241E431400557CB7 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		C036A9E4241DF90D002AFC54 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		C044678F241AC8600019006E /* Caveman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Caveman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0446792241AC8600019006E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				C04467A9241AD44F0019006E /* OnboardingViewController.swift */,
 				C04467AD241AEEC90019006E /* LoginViewController.swift */,
 				C0446796241AC8600019006E /* HomeViewController.swift */,
+				C0308162241E431400557CB7 /* TabBarController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				C04467B3241CD97C0019006E /* TitleSection.swift in Sources */,
 				C04467AC241AE1C20019006E /* OnboardingView.swift in Sources */,
 				C04467BD241CE41F0019006E /* FeaturedCell.swift in Sources */,
+				C0308163241E431400557CB7 /* TabBarController.swift in Sources */,
 				C04467B1241CD96C0019006E /* FeaturedSection.swift in Sources */,
 				C04467AA241AD44F0019006E /* OnboardingViewController.swift in Sources */,
 			);

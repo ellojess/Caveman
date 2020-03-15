@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 struct FeaturedSection: Section {
+    
     var numberOfItems: Int = 4
     let images = ["artistman", "workoutman", "dancingman", "singingman", "bathman", "thumbsupman"]
     let headings = ["Artsy", "Active", "Happy Feet", "Serendipitous", "Spa Man", "Supportive"]
@@ -37,7 +38,8 @@ struct FeaturedSection: Section {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FeaturedCell", for: indexPath) as! FeaturedCell
         cell.backgroundColor = UIColor(red:0.44, green:0.43, blue:0.98, alpha:1.0)
         cell.layer.cornerRadius = 10
-        // TODO: return cell with data
+        cell.image.image = UIImage(named: images[indexPath.row])
+        cell.title.text = headings[indexPath.row]
         return cell
         
     }

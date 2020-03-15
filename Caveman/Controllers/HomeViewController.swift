@@ -74,8 +74,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate{
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         collectionView.reloadData()
-    }
-    
+    }    
 }
 
 
