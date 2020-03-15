@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C036A9E5241DF90D002AFC54 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = C036A9E4241DF90D002AFC54 /* Box.swift */; };
 		C0446793241AC8600019006E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0446792241AC8600019006E /* AppDelegate.swift */; };
 		C0446795241AC8600019006E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0446794241AC8600019006E /* SceneDelegate.swift */; };
 		C0446797241AC8600019006E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0446796241AC8600019006E /* HomeViewController.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C036A9E4241DF90D002AFC54 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		C044678F241AC8600019006E /* Caveman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Caveman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0446792241AC8600019006E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0446794241AC8600019006E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 		C04467A8241AD3C30019006E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C036A9E4241DF90D002AFC54 /* Box.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				C0446797241AC8600019006E /* HomeViewController.swift in Sources */,
 				C0446793241AC8600019006E /* AppDelegate.swift in Sources */,
 				C0446795241AC8600019006E /* SceneDelegate.swift in Sources */,
+				C036A9E5241DF90D002AFC54 /* Box.swift in Sources */,
 				C04467B7241CDA7E0019006E /* Section.swift in Sources */,
 				C04467B3241CD97C0019006E /* TitleSection.swift in Sources */,
 				C04467AC241AE1C20019006E /* OnboardingView.swift in Sources */,
