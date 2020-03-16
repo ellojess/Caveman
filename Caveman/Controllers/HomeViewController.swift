@@ -52,7 +52,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate{
         
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: collectionViewLayout)
         collectionView.backgroundColor = UIColor.white
-        collectionView.register(FeaturedCell.self, forCellWithReuseIdentifier: "CustomCell")
+        collectionView.register(FeaturedCell.self, forCellWithReuseIdentifier: "FeaturedCell")
         collectionView.register(TitleCell.self, forCellWithReuseIdentifier: "TitleCell")
 
         
