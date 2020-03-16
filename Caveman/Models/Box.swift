@@ -19,3 +19,8 @@ struct Box{
     var image: UIImage
 }
 
+struct Item{
+    var title: String
+    var image: UIImage
+}
+
