@@ -44,9 +44,10 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate{
         pastBoxesVC.tabBarItem = UITabBarItem(title: "History", image: UIImage(named: "tab-history"), tag: 2)
         
         
-        let profileVC = ProfileViewController()
-        let navController4 = UINavigationController(rootViewController:profileVC)
+        let profileVC = ContentView()
+        let navController4 = UIHostingController(rootView: profileVC)
         navController4.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "tab-profile"), tag: 3)
+        
         viewControllers = [navController, navController2, navController3, navController4]
     
     }

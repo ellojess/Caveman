@@ -8,6 +8,8 @@
 
 import Foundation
 import UIKit
+import SwiftUI
+import MapKit
 
 class ProfileViewController: UIViewController{
     
@@ -25,4 +27,85 @@ class ProfileViewController: UIViewController{
         self.view.backgroundColor = UIColor(red:0.95, green:0.95, blue:0.95, alpha:1.0)
     }
     
+}
+
+// Content View
+struct ContentView: View {
+    
+    var body: some View {
+        NavigationView {
+        VStack {
+            MapView()
+                .edgesIgnoringSafeArea(.top)
+                .frame(height: 250)
+            
+            CircleImage()
+                .offset(y: -130)
+                .padding(.bottom, -130)
+            
+            VStack(alignment: .center) {
+                Text("Stud Muffin")
+                    .font(.title)
+                    .padding()
+
+                Text("Hometown: San Francisco, CA")
+                    .font(.subheadline)
+                Text("Loves to Stargaze")
+                    .font(.subheadline)
+            }
+            .padding()
+        .navigationBarTitle(Text("Profile"), displayMode: .inline)
+        }
+            
+    }
+    }
+}
+
+struct ContentView_Preview: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+
+// Profile Image
+struct CircleImage: View {
+    var body: some View {
+    
+        Image("selfieman")
+            .resizable()
+            .scaledToFit()
+            .frame(width: 200.0,height:200)
+            .clipShape(Circle())
+            .overlay(
+                Circle().stroke(Color.white, lineWidth: 4))
+            .shadow(radius: 10)
+    }
+}
+
+struct CircleImage_Preview: PreviewProvider {
+    static var previews: some View {
+        CircleImage()
+    }
+}
+
+// Map View
+
+struct MapView: UIViewRepresentable {
+    func makeUIView(context: Context) -> MKMapView {
+        MKMapView(frame: .zero)
+    }
+
+    func updateUIView(_ view: MKMapView, context: Context) {
+        let coordinate = CLLocationCoordinate2D(
+            latitude: 37.773972, longitude: -122.431297)
+        let span = MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5)
+        let region = MKCoordinateRegion(center: coordinate, span: span)
+        view.setRegion(region, animated: true)
+    }
+}
+
+struct MapView_Preview: PreviewProvider {
+    static var previews: some View {
+        MapView()
+    }
 }
