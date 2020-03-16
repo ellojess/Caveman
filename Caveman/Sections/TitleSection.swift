@@ -19,7 +19,6 @@ struct TitleSection: Section {
         self.title = title
     }
     
-    
     func layoutSection() -> NSCollectionLayoutSection? {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .fractionalHeight(1))
         

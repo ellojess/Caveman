@@ -15,7 +15,8 @@ class HomeViewController: UIViewController, UICollectionViewDelegate{
     
     lazy var sections: [Section] = [
         TitleSection(title: "Featured Categories"),
-        FeaturedSection()
+        FeaturedSection(),
+        TitleSection(title: "Last Month's Favorites")
     ]
     
     lazy var collectionViewLayout: UICollectionViewLayout = {
