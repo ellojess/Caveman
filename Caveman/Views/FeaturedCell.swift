@@ -10,11 +10,15 @@ import Foundation
 import UIKit
 
 class FeaturedCell: UICollectionViewCell {
-    static var identifier: String = "FeaturedCell"
+//    static var identifier: String = "FeaturedCell"
     
-//    func setup(){
-//    }
-    
+    var data: Cell? {
+        didSet{
+            guard let data = data else { return }
+            image.image = data.image
+            title.text = data.title
+        }
+    }
     let stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical

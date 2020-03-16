@@ -12,8 +12,18 @@ import UIKit
 struct FeaturedSection: Section {
     
     var numberOfItems: Int = 4
-    let images = ["artistman", "workoutman", "dancingman", "singingman", "bathman", "thumbsupman"]
-    let headings = ["Artsy", "Active", "Happy Feet", "Serendipitous", "Spa Man", "Supportive"]
+//    let images = ["artistman", "workoutman", "dancingman", "singingman", "bathman", "thumbsupman"]
+//    let headings = ["Artsy", "Active", "Happy Feet", "Serendipitous", "Spa Man", "Supportive"]
+    
+    
+    let data = [
+        Cell(title: "Mr Artsy Fartsy", image: UIImage(named: "artistman")!),
+        Cell(title: "Sir Activity", image: UIImage(named: "workoutman")!),
+        Cell(title: "Happy Feet Jr", image: UIImage(named: "dancingman")!),
+        Cell(title: "Saint Jolly", image: UIImage(named: "singingman")!),
+        Cell(title: "Lax Man", image: UIImage(named: "bathman")!),
+        Cell(title: "Monsieur Supportive", image: UIImage(named: "thumbsupman")!)
+    ]
     
         
     func layoutSection() -> NSCollectionLayoutSection? {
@@ -38,8 +48,7 @@ struct FeaturedSection: Section {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FeaturedCell", for: indexPath) as! FeaturedCell
         cell.backgroundColor = UIColor(red:0.44, green:0.43, blue:0.98, alpha:1.0)
         cell.layer.cornerRadius = 10
-        cell.image.image = UIImage(named: images[indexPath.row])
-        cell.title.text = headings[indexPath.row]
+        cell.data = self.data[indexPath.row]
         return cell
         
     }
