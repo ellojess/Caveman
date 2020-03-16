@@ -24,3 +24,8 @@ struct Item{
     var image: UIImage
 }
 
+struct New{
+    var title: String
+    var image: UIImage
+}
+
