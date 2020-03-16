@@ -23,6 +23,7 @@ class NewCollectionViewCell: UICollectionViewCell {
     
     public func setUp(with model: New) {
         image.image = model.image
+        // needs looking at
         title.text = model.title
     }
 
