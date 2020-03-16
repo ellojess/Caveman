@@ -16,7 +16,8 @@ class HomeViewController: UIViewController, UICollectionViewDelegate{
     lazy var sections: [Section] = [
         TitleSection(title: "Featured Categories"),
         FeaturedSection(),
-        TitleSection(title: "Last Month's Favorites")
+        TitleSection(title: "Last Month's Favorites"),
+        FavoriteSection()
     ]
     
     lazy var collectionViewLayout: UICollectionViewLayout = {
@@ -30,6 +31,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate{
         
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.title = "Home"
         setViews()
         setupCollectionView()
         collectionView.delegate = self
