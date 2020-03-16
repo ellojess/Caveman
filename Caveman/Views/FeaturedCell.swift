@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 class FeaturedCell: UICollectionViewCell {
-//    static var identifier: String = "FeaturedCell"
     
     var data: Cell? {
         didSet{
@@ -32,6 +31,7 @@ class FeaturedCell: UICollectionViewCell {
         let image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.contentMode = .scaleAspectFit
+        image.layer.cornerRadius = 10
         return image
     }()
     
@@ -53,7 +53,6 @@ class FeaturedCell: UICollectionViewCell {
         stackView.centerXAnchor.constraint(equalTo:  contentView.centerXAnchor).isActive = true
         stackView.centerYAnchor.constraint(equalTo:  contentView.centerYAnchor).isActive = true
 
-        
         stackView.addArrangedSubview(image)
         image.heightAnchor.constraint(equalTo: stackView.heightAnchor, multiplier: 0.75).isActive = true
         
