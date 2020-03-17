@@ -39,20 +39,17 @@ class NewViewController: UIViewController, UICollectionViewDataSource, UICollect
     
     lazy var collectionView: UICollectionView = {
         
-        let flow = UICollectionViewFlowLayout()
+        let flow = NewGridLayout()
         
         let collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: flow)
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
                 
-        // Customization
         collectionView.alwaysBounceVertical = true
-        collectionView.backgroundColor = .white
         
-        //Registering the cell
+        //Register cell
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-        collectionView.register(NewCollectionViewCell.self, forCellWithReuseIdentifier: "newOrderCell")
+        collectionView.register(UINib.init(nibName: "NewCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "newOrderCell")
         collectionView.backgroundColor = UIColor(red:1.0, green:1.0, blue:1.0, alpha:0.0)
         return collectionView
     }()
@@ -61,9 +58,6 @@ class NewViewController: UIViewController, UICollectionViewDataSource, UICollect
         super.viewDidLoad()
         view.addSubview(collectionView)
         navigationItem.title = "Order a New Beau"
-//        self.navigationController?.navigationBar.prefersLargeTitles = true
-
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -74,35 +68,13 @@ class NewViewController: UIViewController, UICollectionViewDataSource, UICollect
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "newOrderCell", for: indexPath) as! NewCollectionViewCell
         
         if indexPath == selectedIndexPath{
-            cell.backgroundColor = #colorLiteral(red: 1, green: 0.5756825209, blue: 0.5681426525, alpha: 0.9445098459)
+            cell.backgroundColor = UIColor(red:0.95, green:0.95, blue:0.95, alpha:1.0)
         }else{
-            cell.backgroundColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+            cell.backgroundColor = UIColor(red:1.00, green:1.00, blue:1.00, alpha:0.5)
         }
-        
         
         cell.setUp(with: data[indexPath.row])
         return cell
     }
     
-    
-    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        if selectedIndexPath == indexPath {
-          selectedIndexPath = nil
-        } else {
-          selectedIndexPath = indexPath
-        }
-          return false
-    }
-    
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//
-//        print("indexPath.row = ", indexPath.row)
-//        // Find the current cell
-//        let cell: NewboxesCell = collectionView.cellForItem(at: indexPath) as! NewboxesCell
-//        print(cell)
-//        cell.backgroundColor = #colorLiteral(red: 1, green: 0.5756825209, blue: 0.5681426525, alpha: 0.9445098459)
-//    }
-    
 }
-
-
