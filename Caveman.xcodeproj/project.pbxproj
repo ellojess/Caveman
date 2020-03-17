@@ -16,6 +16,7 @@
 		C0308171241F573A00557CB7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0308170241F573A00557CB7 /* ProfileViewController.swift */; };
 		C030817824201BC900557CB7 /* NewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C030817624201BC900557CB7 /* NewCollectionViewCell.swift */; };
 		C030817924201BC900557CB7 /* NewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C030817724201BC900557CB7 /* NewCollectionViewCell.xib */; };
+		C030817D2420B12B00557CB7 /* PastBoxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C030817C2420B12B00557CB7 /* PastBoxViewController.swift */; };
 		C036A9E5241DF90D002AFC54 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = C036A9E4241DF90D002AFC54 /* Box.swift */; };
 		C0446793241AC8600019006E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0446792241AC8600019006E /* AppDelegate.swift */; };
 		C0446795241AC8600019006E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0446794241AC8600019006E /* SceneDelegate.swift */; };
@@ -43,6 +44,7 @@
 		C0308170241F573A00557CB7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C030817624201BC900557CB7 /* NewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCollectionViewCell.swift; sourceTree = "<group>"; };
 		C030817724201BC900557CB7 /* NewCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewCollectionViewCell.xib; sourceTree = "<group>"; };
+		C030817C2420B12B00557CB7 /* PastBoxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastBoxViewController.swift; sourceTree = "<group>"; };
 		C036A9E4241DF90D002AFC54 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
 		C044678F241AC8600019006E /* Caveman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Caveman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0446792241AC8600019006E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				C030816A241F4FEC00557CB7 /* PastViewController.swift */,
 				C030816E241F572800557CB7 /* NewViewController.swift */,
 				C0308170241F573A00557CB7 /* ProfileViewController.swift */,
+				C030817C2420B12B00557CB7 /* PastBoxViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C04467AE241AEEC90019006E /* LoginViewController.swift in Sources */,
+				C030817D2420B12B00557CB7 /* PastBoxViewController.swift in Sources */,
 				C04467B9241CDBF50019006E /* TitleCell.swift in Sources */,
 				C04467B5241CD98C0019006E /* FavoriteSection.swift in Sources */,
 				C030817824201BC900557CB7 /* NewCollectionViewCell.swift in Sources */,

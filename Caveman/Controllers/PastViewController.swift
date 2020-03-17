@@ -13,10 +13,10 @@ class PastViewController: UIViewController, UITableViewDelegate{
     
     let tableView =  UITableView()
     
-    let boxesArray = [Box(title: "March 2020", image: UIImage(named: "box2")!), Box(title: "Febuary 2020", image: UIImage(named: "box2")!),
+    let boxesArray = [Box(title: "March 2020", image: UIImage(named: "box2")!),
+                      Box(title: "Febuary 2020", image: UIImage(named: "box2")!),
                       Box(title: "January 2020", image: UIImage(named: "box2")!),
-                      Box(title: "December 2019", image: UIImage(named: "box2")!),
-                      Box(title: "September 2019", image: UIImage(named: "box2")!)]
+                      Box(title: "December 2019", image: UIImage(named: "box2")!)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +42,8 @@ class PastViewController: UIViewController, UITableViewDelegate{
     
     func setUpTableView(){
         view.addSubview(tableView)
+        view.backgroundColor = .white
+        
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
         tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
@@ -72,5 +74,8 @@ extension PastViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("selected!")
+        let detail: PastBoxViewController = PastBoxViewController()
+        detail.boxMonth = self.boxesArray[indexPath.row].title + " Box"
+        self.navigationController?.pushViewController(detail, animated: true)
     }
 }
