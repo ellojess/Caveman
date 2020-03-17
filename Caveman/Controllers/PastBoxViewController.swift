@@ -9,4 +9,6 @@
 import Foundation
 import UIKit
 
-
+class PastBoxViewController: UIViewController, UITableViewDelegate {
+    var boxMonth: String = ""
+}
