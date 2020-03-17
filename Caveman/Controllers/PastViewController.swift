@@ -13,7 +13,10 @@ class PastViewController: UIViewController, UITableViewDelegate{
     
     let tableView =  UITableView()
     
-    let boxesArray = [Box(title: "March 2020", image: UIImage(named: "box2")!), Box(title: "Febuary 2020", image: UIImage(named: "box2")!), Box(title: "January 2020", image: UIImage(named: "box2")!), Box(title: "December 2019", image: UIImage(named: "box2")!), Box(title: "November 2019", image: UIImage(named: "box2")!), Box(title: "October 2019", image: UIImage(named: "box2")!), Box(title: "September 2019", image: UIImage(named: "box2")!)]
+    let boxesArray = [Box(title: "March 2020", image: UIImage(named: "box2")!), Box(title: "Febuary 2020", image: UIImage(named: "box2")!),
+                      Box(title: "January 2020", image: UIImage(named: "box2")!),
+                      Box(title: "December 2019", image: UIImage(named: "box2")!),
+                      Box(title: "September 2019", image: UIImage(named: "box2")!)]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,9 +52,7 @@ class PastViewController: UIViewController, UITableViewDelegate{
         tableView.delegate = self
         tableView.dataSource = self
     }
-    
 }
-
 
 extension PastViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -60,7 +61,6 @@ extension PastViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       let cell = tableView.dequeueReusableCell(withIdentifier: "PastCell", for: indexPath) as! PastCell
-//        cell.setCellContents(box: boxesArray[indexPath.row])
         cell.accessoryType = .disclosureIndicator
         cell.selectionStyle = .none
       return cell
