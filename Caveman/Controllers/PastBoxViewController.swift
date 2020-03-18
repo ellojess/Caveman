@@ -9,7 +9,9 @@
 import Foundation
 import UIKit
 
-// view for sin
+// view for single box items 
 class PastBoxViewController: UIViewController, UITableViewDelegate {
     var boxMonth: String = ""
+    var currentOrder: Box!
+    
 }

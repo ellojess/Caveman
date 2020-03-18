@@ -9,7 +9,6 @@
 import UIKit
 
 class HomeViewController: UIViewController, UICollectionViewDelegate{
-    
 
     var collectionView: UICollectionView!
     
@@ -34,8 +33,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate{
         navigationItem.title = "Home"
         setViews()
         setupCollectionView()
-        collectionView.delegate = self
-        collectionView.dataSource = self
     }
     
     func setViews(){
@@ -48,26 +45,26 @@ class HomeViewController: UIViewController, UICollectionViewDelegate{
         self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.title = self.tabBarItem.title
-        self.navigationItem.setHidesBackButton(true, animated: false)
+        self.navigationItem.setHidesBackButton(true, animated: true)
     }
     
     func setupCollectionView(){
         
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: collectionViewLayout)
+        collectionView.dataSource = self
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        
         collectionView.backgroundColor = UIColor.white
-        collectionView.register(FeaturedCell.self, forCellWithReuseIdentifier: "FeaturedCell")
         collectionView.register(TitleCell.self, forCellWithReuseIdentifier: "TitleCell")
+        collectionView.register(FeaturedCell.self, forCellWithReuseIdentifier: "FeaturedCell")
         collectionView.register(FavoritesCell.self, forCellWithReuseIdentifier: "FavoritesCell")
 
-        
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
         
         self.view.addSubview(collectionView)
         collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
         collectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
         collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         collectionView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
-        
         collectionView.reloadData()
     }
     

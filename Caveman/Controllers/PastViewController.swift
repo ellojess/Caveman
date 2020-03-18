@@ -65,6 +65,16 @@ class PastViewController: UIViewController, UITableViewDelegate{
         tableView.dataSource = self
     }
     
+//    func boxInfo() {
+//        for title in boxesArray {
+//            for image in boxesArray{
+//                orders.append(title)
+//            orders.append(image)
+//            }
+//
+//        }
+//    }
+    
     func boxInfo() {
         for box in boxesArray {
             orders.append(box)
@@ -83,6 +93,7 @@ extension PastViewController: UITableViewDataSource {
         cell.accessoryType = .disclosureIndicator
         cell.selectionStyle = .none
         cell.textLabel?.text = "\(orders[indexPath.row].title)"
+        cell.textLabel?.textAlignment = .center
       return cell
     }
     

@@ -114,9 +114,9 @@
 				C04467AD241AEEC90019006E /* LoginViewController.swift */,
 				C0446796241AC8600019006E /* HomeViewController.swift */,
 				C0308162241E431400557CB7 /* TabBarController.swift */,
-				C030816A241F4FEC00557CB7 /* PastViewController.swift */,
 				C030816E241F572800557CB7 /* NewViewController.swift */,
 				C0308170241F573A00557CB7 /* ProfileViewController.swift */,
+				C030816A241F4FEC00557CB7 /* PastViewController.swift */,
 				C030817C2420B12B00557CB7 /* PastBoxViewController.swift */,
 			);
 			path = Controllers;

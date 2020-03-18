@@ -11,12 +11,12 @@ import UIKit
 
 class PastCell: UITableViewCell {
     
-    var orders = [Box]()
+    static var identifier = "PastCell"
         
     let stackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .horizontal
-        stackView.spacing = 10
+        stackView.spacing = 12
         stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.distribution = .fill
         return stackView
@@ -26,12 +26,14 @@ class PastCell: UITableViewCell {
         let title = UILabel()
         title.font = UIFont(name: "AvenirNext-Bold", size: 20)
         title.textColor = UIColor(red:0.29, green:0.29, blue:0.29, alpha:1.0)
+        
         title.translatesAutoresizingMaskIntoConstraints = false
         return title
     }()
     
     let itemImage: UIImageView = {
         let image = UIImageView()
+        image.image = UIImage(named: "box2")
         image.translatesAutoresizingMaskIntoConstraints = false
         image.contentMode = .scaleAspectFit
         return image
@@ -51,16 +53,17 @@ class PastCell: UITableViewCell {
         
         contentView.addSubview(stackView)
         
-        stackView.widthAnchor.constraint(equalTo:  contentView.widthAnchor, multiplier: 0.85).isActive = true
-        stackView.heightAnchor.constraint(equalTo:  contentView.heightAnchor, multiplier: 0.75).isActive = true
-        stackView.centerXAnchor.constraint(equalTo:  contentView.centerXAnchor).isActive = true
-        stackView.centerYAnchor.constraint(equalTo:  contentView.centerYAnchor).isActive = true
+        stackView.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.85).isActive = true
+        stackView.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.75).isActive = true
+        stackView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+        stackView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
         
         stackView.addArrangedSubview(itemImage)
         itemImage.widthAnchor.constraint(equalTo: stackView.widthAnchor, multiplier: 0.25).isActive = true
         
         stackView.addArrangedSubview(title)
         title.widthAnchor.constraint(equalTo: stackView.widthAnchor, multiplier: 0.55).isActive = true
+        title.textAlignment = .center
         
         stackView.addArrangedSubview(favoriteButton)
         favoriteButton.isHidden = false
