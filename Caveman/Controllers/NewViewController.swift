@@ -56,8 +56,10 @@ class NewViewController: UIViewController, UICollectionViewDataSource, UICollect
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor(red:1.00, green:0.6, blue:1.00, alpha:0.5)
         view.addSubview(collectionView)
         navigationItem.title = "Order a New Beau"
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
