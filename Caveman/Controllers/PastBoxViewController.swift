@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+// view for sin
 class PastBoxViewController: UIViewController, UITableViewDelegate {
     var boxMonth: String = ""
 }

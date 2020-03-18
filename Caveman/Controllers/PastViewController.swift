@@ -9,14 +9,23 @@
 import Foundation
 import UIKit
 
+// history tab page 
 class PastViewController: UIViewController, UITableViewDelegate{
     
-    let tableView =  UITableView()
+    var orders: [Box] = []
+    
+    let tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.rowHeight = 100
+        return tableView
+        }()
     
     let boxesArray = [Box(title: "March 2020", image: UIImage(named: "box2")!),
                       Box(title: "Febuary 2020", image: UIImage(named: "box2")!),
                       Box(title: "January 2020", image: UIImage(named: "box2")!),
                       Box(title: "December 2019", image: UIImage(named: "box2")!)]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +33,7 @@ class PastViewController: UIViewController, UITableViewDelegate{
         setUpNavBar()
         setUpTableView()
         tableView.register(PastCell.self, forCellReuseIdentifier: "PastCell")
+        boxInfo()
     }
     
     override func loadView() {
@@ -54,6 +64,13 @@ class PastViewController: UIViewController, UITableViewDelegate{
         tableView.delegate = self
         tableView.dataSource = self
     }
+    
+    func boxInfo() {
+        for box in boxesArray {
+            orders.append(box)
+        }
+    }
+    
 }
 
 extension PastViewController: UITableViewDataSource {
@@ -65,17 +82,13 @@ extension PastViewController: UITableViewDataSource {
       let cell = tableView.dequeueReusableCell(withIdentifier: "PastCell", for: indexPath) as! PastCell
         cell.accessoryType = .disclosureIndicator
         cell.selectionStyle = .none
+        cell.textLabel?.text = "\(orders[indexPath.row].title)"
       return cell
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100.0
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("selected!")
         let detail: PastBoxViewController = PastBoxViewController()
-        detail.boxMonth = self.boxesArray[indexPath.row].title + " Box"
         self.navigationController?.pushViewController(detail, animated: true)
     }
 }

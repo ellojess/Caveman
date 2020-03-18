@@ -10,6 +10,8 @@ import Foundation
 import UIKit
 
 class PastCell: UITableViewCell {
+    
+    var orders = [Box]()
         
     let stackView: UIStackView = {
         let stackView = UIStackView()
