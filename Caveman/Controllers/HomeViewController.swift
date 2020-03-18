@@ -57,6 +57,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate{
         collectionView.backgroundColor = UIColor.white
         collectionView.register(FeaturedCell.self, forCellWithReuseIdentifier: "FeaturedCell")
         collectionView.register(TitleCell.self, forCellWithReuseIdentifier: "TitleCell")
+        collectionView.register(FavoritesCell.self, forCellWithReuseIdentifier: "FavoritesCell")
 
         
         collectionView.translatesAutoresizingMaskIntoConstraints = false
