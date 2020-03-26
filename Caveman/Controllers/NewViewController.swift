@@ -10,6 +10,7 @@ import UIKit
 class NewViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     var selectedIndexPath: IndexPath? {
+        // TODO: review selectedIndexPath, cells are not highlighting when clicked on 
            didSet {
                var indexPaths: [IndexPath] = []
                if let selectedIndexPath = selectedIndexPath {
