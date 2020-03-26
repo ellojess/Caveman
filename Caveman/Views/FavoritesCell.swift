@@ -20,6 +20,8 @@ class FavoritesCell: UICollectionViewCell {
         setup()
     }
     
+    // TODO: edit constraints in FavoritesCell.xib, not looking right on HomeVC
+    
     func setup(){
         manImage.layer.cornerRadius = 10
         manLabel.text = ""
