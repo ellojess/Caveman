@@ -62,6 +62,25 @@ class NewViewController: UIViewController, UICollectionViewDataSource, UICollect
         
     }
     
+//    @objc func favTapped(){
+//        if self.favoriteButton.currentImage == UIImage(named: "unfavorite"){
+//            
+//            UIView.animate(withDuration: 0.3,
+//            animations: {
+//                self.favoriteButton.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+//            },
+//            completion: { _ in
+//                UIView.animate(withDuration: 0.3) {
+//                    self.favoriteButton.transform = CGAffineTransform.identity
+//                }
+//            })
+//            
+//            self.favoriteButton.setImage(UIImage(named: "favorite"), for: .normal)
+//        }else{
+//            self.favoriteButton.setImage(UIImage(named: "unfavorite"), for: .normal)
+//        }
+//    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return data.count
     }
