@@ -10,7 +10,7 @@ import UIKit
 class NewViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     var selectedIndexPath: IndexPath? {
-        // TODO: review selectedIndexPath, cells are not highlighting when clicked on 
+
            didSet {
                var indexPaths: [IndexPath] = []
                if let selectedIndexPath = selectedIndexPath {
@@ -61,26 +61,7 @@ class NewViewController: UIViewController, UICollectionViewDataSource, UICollect
         navigationItem.title = "Order a New Beau"
         
     }
-    
-//    @objc func favTapped(){
-//        if self.favoriteButton.currentImage == UIImage(named: "unfavorite"){
-//            
-//            UIView.animate(withDuration: 0.3,
-//            animations: {
-//                self.favoriteButton.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
-//            },
-//            completion: { _ in
-//                UIView.animate(withDuration: 0.3) {
-//                    self.favoriteButton.transform = CGAffineTransform.identity
-//                }
-//            })
-//            
-//            self.favoriteButton.setImage(UIImage(named: "favorite"), for: .normal)
-//        }else{
-//            self.favoriteButton.setImage(UIImage(named: "unfavorite"), for: .normal)
-//        }
-//    }
-    
+    //
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return data.count
     }
@@ -99,4 +80,16 @@ class NewViewController: UIViewController, UICollectionViewDataSource, UICollect
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        if selectedIndexPath == indexPath {
+            selectedIndexPath = nil
+        } else {
+            selectedIndexPath = indexPath
+        }
+        return false
+    }
+    
 }
+
+// Props to:
+// https://www.raywenderlich.com/9477-uicollectionview-tutorial-reusable-views-selection-and-reordering
