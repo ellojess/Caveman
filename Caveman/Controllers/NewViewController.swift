@@ -92,4 +92,5 @@ class NewViewController: UIViewController, UICollectionViewDataSource, UICollect
 }
 
 // Props to:
+//https://make-school-courses.github.io/MOB-1.2-Introduction-to-iOS-Development/#/Lessons/07-CollectionViews/README
 // https://www.raywenderlich.com/9477-uicollectionview-tutorial-reusable-views-selection-and-reordering

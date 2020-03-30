@@ -18,6 +18,8 @@ class NewCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         self.image.contentMode = .scaleAspectFit
+        layer.cornerRadius = 12
+        layer.masksToBounds = true
     }
     
     public func setUp(with model: New) {
