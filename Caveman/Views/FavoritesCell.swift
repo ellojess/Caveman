@@ -15,6 +15,14 @@ class FavoritesCell: UICollectionViewCell {
     @IBOutlet weak var manImage: UIImageView!
     @IBOutlet weak var manLabel: UILabel!
     
+    var data: Cell? {
+        didSet{
+            guard let data = data else { return }
+            manImage.image = data.image
+            manLabel.text = data.title
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         setup()
