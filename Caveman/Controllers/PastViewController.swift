@@ -13,6 +13,8 @@ import UIKit
 class PastViewController: UIViewController, UITableViewDelegate{
     
     var orders: [Box] = []
+
+    var currentOrder: Box!
     
     let tableView: UITableView = {
         let tableView = UITableView()

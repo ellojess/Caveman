@@ -1,90 +1,65 @@
 //
-//  BoxCell.swift
+//  OneBoxCell.swift
 //  Caveman
 //
-//  Created by Bo on 4/10/20.
+//  Created by Bo on 4/13/20.
 //  Copyright © 2020 Jessica Trinh. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class BoxCell: UITableViewCell {
+class OneBoxCell: UITableViewCell{
     
-    static var identifier = "BoxCell"
-    
-    let background : UIView = {
-        let background = UIView()
-        background.translatesAutoresizingMaskIntoConstraints = false
-        background.backgroundColor = .white
-        return background
+    let stackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.spacing = 10
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        stackView.distribution = .fill
+        return stackView
     }()
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
+    let title: UILabel = {
+        let title = UILabel()
+        title.font = UIFont(name: "AvenirNext-Bold", size: 20)
+        title.textColor = UIColor(red:0.29, green:0.29, blue:0.29, alpha:1.0)
+        title.translatesAutoresizingMaskIntoConstraints = false
+        return title
+    }()
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
-    }
+    let itemImage: UIImageView = {
+        let image = UIImageView()
+        image.translatesAutoresizingMaskIntoConstraints = false
+        image.contentMode = .scaleAspectFit
+        return image
+    }()
     
-    //initializer for a cell
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?){
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.setup()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        self.setup()
+        
+        contentView.addSubview(stackView)
+        
+        stackView.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.85).isActive = true
+        stackView.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.75).isActive = true
+        stackView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+        stackView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
+        
+        stackView.addArrangedSubview(itemImage)
+        itemImage.widthAnchor.constraint(equalTo: stackView.widthAnchor, multiplier: 0.25).isActive = true
+        
+        stackView.addArrangedSubview(title)
+        title.widthAnchor.constraint(equalTo: stackView.widthAnchor, multiplier: 0.55).isActive = true
         
     }
     
-    func setup() {
-        
-        self.contentView.addSubview(background)
-        background.topAnchor.constraint(equalTo: self.contentView.topAnchor, constant: 10).isActive = true
-        background.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor).isActive = true
-        background.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor).isActive = true
-        background.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor).isActive = true
-        
-    }
-    
-    // Adding custom content
-    func setContents(box: Box) {
-        textLabel?.text = box.title
-
-        
-        imageView?.translatesAutoresizingMaskIntoConstraints = false
-        imageView?.heightAnchor.constraint(equalToConstant: 60).isActive = true
-        imageView?.widthAnchor.constraint(equalToConstant: 60).isActive = true
-  
-        imageView?.centerYAnchor.constraint(equalTo: background.centerYAnchor).isActive = true
-        
-        textLabel?.translatesAutoresizingMaskIntoConstraints = false
-        textLabel?.centerYAnchor.constraint(equalTo: background.centerYAnchor).isActive = true
-        textLabel?.leadingAnchor.constraint(equalTo: imageView!.trailingAnchor, constant: 25).isActive = true
-        
-        
-    }
-    
-    func setOneBox(item: Item) {
-        
-        textLabel?.text = item.title
-        
-        imageView?.translatesAutoresizingMaskIntoConstraints = false
-        imageView?.heightAnchor.constraint(equalToConstant: 60).isActive = true
-        imageView?.widthAnchor.constraint(equalToConstant: 60).isActive = true
-        
-        imageView?.centerYAnchor.constraint(equalTo: background.centerYAnchor).isActive = true
-        
-        textLabel?.translatesAutoresizingMaskIntoConstraints = false
-        textLabel?.centerYAnchor.constraint(equalTo: background.centerYAnchor).isActive = true
-        textLabel?.leadingAnchor.constraint(equalTo: imageView!.trailingAnchor, constant: 25).isActive = true
-        
+    func setCellContents(item: Item){
+        itemImage.image = item.image
+        title.text = item.title
     }
     
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 }

@@ -12,7 +12,12 @@ import UIKit
 // view for single box items 
 class PastBoxViewController: UIViewController, UITableViewDelegate {
     var boxMonth: String = ""
+    
     var currentOrder: Box!
+    
+    var orders: [Box] = []
+    
+    var boxItems: [Item] = []
     
     let tableView: UITableView = {
         let tableView = UITableView()
@@ -40,6 +45,22 @@ class PastBoxViewController: UIViewController, UITableViewDelegate {
         tableView.backgroundColor = .white
         
         tableView.delegate = self
+//        tableView.dataSource = self
     }
+    
 
 }
+
+//extension PastBoxViewController: UITableViewDataSource {
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return currentOrder.count
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "OneBoxCell", for: indexPath) as! OneBoxCell
+//        cell.setCellContents(item: boxItems[indexPath.row])
+//        return cell
+//    }
+    
+    
+//}
