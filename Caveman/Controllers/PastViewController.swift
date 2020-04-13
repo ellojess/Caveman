@@ -59,7 +59,7 @@ class PastViewController: UIViewController, UITableViewDelegate{
         tableView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
         tableView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        tableView.backgroundColor = UIColor(red:1.0, green:1.0, blue:0.95, alpha:1.0)
+        tableView.backgroundColor = .white
         
         tableView.delegate = self
         tableView.dataSource = self
