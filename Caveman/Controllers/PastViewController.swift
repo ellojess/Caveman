@@ -26,6 +26,16 @@ class PastViewController: UIViewController, UITableViewDelegate{
                       Box(title: "January 2020", image: UIImage(named: "box2")!),
                       Box(title: "December 2019", image: UIImage(named: "box2")!)]
     
+
+    // list of items
+    let artistman = Item(title: "Mr Artsy Fartsy", image: UIImage(named: "artistman")!)
+    let workoutman = Item(title: "Sir Activity", image: UIImage(named: "workoutman")!)
+    let dancingman = Item(title: "Happy Feet", image: UIImage(named: "dancingman")!)
+    let singingman = Item(title: "Saint Jolly", image: UIImage(named: "singingman")!)
+    let bathman = Item(title: "Lax Man", image: UIImage(named: "bathman")!)
+    let thumbsupman = Item(title: "Monsieur Supportive", image: UIImage(named: "thumbsupman")!)
+    let confusedspaceman = Item(title: "Stargazer", image: UIImage(named: "confusedspaceman")!)
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
