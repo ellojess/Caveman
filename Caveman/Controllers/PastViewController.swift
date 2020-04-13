@@ -21,12 +21,7 @@ class PastViewController: UIViewController, UITableViewDelegate{
         return tableView
         }()
     
-    let boxesArray = [Box(title: "March 2020", image: UIImage(named: "box2")!),
-                      Box(title: "Febuary 2020", image: UIImage(named: "box2")!),
-                      Box(title: "January 2020", image: UIImage(named: "box2")!),
-                      Box(title: "December 2019", image: UIImage(named: "box2")!)]
-    
-
+    func getItems() {
     // list of items
     let artistman = Item(title: "Mr Artsy Fartsy", image: UIImage(named: "artistman")!)
     let workoutman = Item(title: "Sir Activity", image: UIImage(named: "workoutman")!)
@@ -35,7 +30,18 @@ class PastViewController: UIViewController, UITableViewDelegate{
     let bathman = Item(title: "Lax Man", image: UIImage(named: "bathman")!)
     let thumbsupman = Item(title: "Monsieur Supportive", image: UIImage(named: "thumbsupman")!)
     let confusedspaceman = Item(title: "Stargazer", image: UIImage(named: "confusedspaceman")!)
+    let santaman = Item(title: "Holiday Sweetie", image: UIImage(named: "santaman")!)
     
+    
+    let boxesArray = [Box(title: "March 2020", items: [bathman, singingman], image: UIImage(named: "box2")!),
+                      Box(title: "Febuary 2020", items: [workoutman, singingman, thumbsupman], image: UIImage(named: "box2")!),
+                      Box(title: "January 2020", items: [confusedspaceman, bathman], image: UIImage(named: "box2")!),
+                      Box(title: "December 2019", items: [santaman, dancingman, artistman], image: UIImage(named: "box2")!)]
+        
+        for box in boxesArray {
+            orders.append(box)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +49,8 @@ class PastViewController: UIViewController, UITableViewDelegate{
         setUpNavBar()
         setUpTableView()
         tableView.register(PastCell.self, forCellReuseIdentifier: "PastCell")
-        boxInfo()
+//        boxInfo()
+        getItems()
     }
     
     override func loadView() {
@@ -85,17 +92,18 @@ class PastViewController: UIViewController, UITableViewDelegate{
 //        }
 //    }
     
-    func boxInfo() {
-        for box in boxesArray {
-            orders.append(box)
-        }
-    }
+//    func boxInfo() {
+//        for box in boxesArray {
+//            orders.append(box)
+//        }
+//    }
     
 }
 
 extension PastViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return boxesArray.count
+//        return boxesArray.count
+        return orders.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

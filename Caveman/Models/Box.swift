@@ -16,6 +16,7 @@ struct Cell{
 
 struct Box{
     var title: String
+    var items: [Item]
     var image: UIImage
 }
 
