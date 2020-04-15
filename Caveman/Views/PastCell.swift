@@ -66,7 +66,7 @@ class PastCell: UITableViewCell {
         title.textAlignment = .center
         
         stackView.addArrangedSubview(favoriteButton)
-        favoriteButton.isHidden = false
+        favoriteButton.isHidden = false //hello hello testing here
         favoriteButton.isUserInteractionEnabled = true
         favoriteButton.addTarget(self, action: #selector(favTapped), for: .touchDown)
         
@@ -75,6 +75,11 @@ class PastCell: UITableViewCell {
     func setCellContents(item: Item){
         itemImage.image = item.image
         title.text = item.title
+    }
+    
+    func setBoxContents(box: Box){
+        textLabel?.text = box.title
+        imageView?.image = box.image
     }
     
     @objc func favTapped(){

@@ -51,7 +51,6 @@ class PastViewController: UIViewController, UITableViewDelegate{
         setUpNavBar()
         setUpTableView()
         tableView.register(PastCell.self, forCellReuseIdentifier: "PastCell")
-//        boxInfo()
         getItems()
     }
     
@@ -84,27 +83,10 @@ class PastViewController: UIViewController, UITableViewDelegate{
         tableView.dataSource = self
     }
     
-//    func boxInfo() {
-//        for title in boxesArray {
-//            for image in boxesArray{
-//                orders.append(title)
-//            orders.append(image)
-//            }
-//
-//        }
-//    }
-    
-//    func boxInfo() {
-//        for box in boxesArray {
-//            orders.append(box)
-//        }
-//    }
-    
 }
 
 extension PastViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return boxesArray.count
         return orders.count
     }
     
@@ -114,12 +96,17 @@ extension PastViewController: UITableViewDataSource {
         cell.selectionStyle = .none
         cell.textLabel?.text = "\(orders[indexPath.row].title)"
         cell.textLabel?.textAlignment = .center
+        cell.textLabel?.text = "\(indexPath.row) \(orders[indexPath.row].title)"
+        cell.favoriteButton.isHidden = true
+    
+        cell.setBoxContents(box: orders[indexPath.row])
       return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("selected!")
-        let detail: PastBoxViewController = PastBoxViewController()
-        self.navigationController?.pushViewController(detail, animated: true)
+        let nextVC: PastBoxViewController = PastBoxViewController()
+        nextVC.currentOrder = orders[indexPath.row]
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
 }

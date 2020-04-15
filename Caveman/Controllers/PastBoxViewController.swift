@@ -10,12 +10,9 @@ import Foundation
 import UIKit
 
 // view for single box items 
-class PastBoxViewController: UIViewController, UITableViewDelegate {
-    var boxMonth: String = ""
+class PastBoxViewController: UIViewController {
     
     var currentOrder: Box!
-    
-    var orders: [Box] = []
     
     var boxItems: [Item] = []
     
@@ -31,11 +28,13 @@ class PastBoxViewController: UIViewController, UITableViewDelegate {
         
         view.backgroundColor = .white
         setUpTableView()
+        getItemsInOrder()
     }
     
     func setUpTableView(){
         view.addSubview(tableView)
         view.backgroundColor = .white
+        tableView.register(PastCell.self, forCellReuseIdentifier: "PastCell")
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
@@ -45,22 +44,32 @@ class PastBoxViewController: UIViewController, UITableViewDelegate {
         tableView.backgroundColor = .white
         
         tableView.delegate = self
-//        tableView.dataSource = self
+        tableView.dataSource = self
+    }
+    
+    func getItemsInOrder() {
+        
+        let items = currentOrder!.items
+        
+        for item in items {
+            boxItems.append(item)
+        }
     }
     
 
 }
 
-//extension PastBoxViewController: UITableViewDataSource {
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return currentOrder.count
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "OneBoxCell", for: indexPath) as! OneBoxCell
-//        cell.setCellContents(item: boxItems[indexPath.row])
-//        return cell
-//    }
+extension PastBoxViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return currentOrder.items.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PastCell", for: indexPath) as! PastCell
+        cell.setCellContents(item: boxItems[indexPath.row])
+        cell.selectionStyle = .none
+        return cell
+    }
     
     
-//}
+}

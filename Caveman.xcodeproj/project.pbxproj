@@ -33,7 +33,6 @@
 		C04467B7241CDA7E0019006E /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04467B6241CDA7E0019006E /* Section.swift */; };
 		C04467B9241CDBF50019006E /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04467B8241CDBF50019006E /* TitleCell.swift */; };
 		C04467BD241CE41F0019006E /* FeaturedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04467BC241CE41F0019006E /* FeaturedCell.swift */; };
-		C0928DD724445EE100821CE3 /* OneBoxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0928DD624445EE100821CE3 /* OneBoxCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,7 +63,6 @@
 		C04467B6241CDA7E0019006E /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		C04467B8241CDBF50019006E /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
 		C04467BC241CE41F0019006E /* FeaturedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedCell.swift; sourceTree = "<group>"; };
-		C0928DD624445EE100821CE3 /* OneBoxCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneBoxCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,7 +135,6 @@
 				C030816C241F505D00557CB7 /* PastCell.swift */,
 				C030817624201BC900557CB7 /* NewCollectionViewCell.swift */,
 				C030817724201BC900557CB7 /* NewCollectionViewCell.xib */,
-				C0928DD624445EE100821CE3 /* OneBoxCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -251,7 +248,6 @@
 				C04467B7241CDA7E0019006E /* Section.swift in Sources */,
 				C0308168241F3D1C00557CB7 /* FavoritesCell.swift in Sources */,
 				C0308171241F573A00557CB7 /* ProfileViewController.swift in Sources */,
-				C0928DD724445EE100821CE3 /* OneBoxCell.swift in Sources */,
 				C04467B3241CD97C0019006E /* TitleSection.swift in Sources */,
 				C030816B241F4FEC00557CB7 /* PastViewController.swift in Sources */,
 				C04467AC241AE1C20019006E /* OnboardingView.swift in Sources */,
