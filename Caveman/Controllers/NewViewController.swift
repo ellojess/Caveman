@@ -50,7 +50,7 @@ class NewViewController: UIViewController, UICollectionViewDataSource, UICollect
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.register(UINib.init(nibName: "NewCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "newOrderCell")
-        collectionView.backgroundColor = UIColor(red:1.0, green:1.0, blue:1.0, alpha:0.0)
+        collectionView.backgroundColor = UIColor(red:0.91, green:0.36, blue:0.62, alpha:1.0)
         return collectionView
     }()
     
@@ -59,9 +59,8 @@ class NewViewController: UIViewController, UICollectionViewDataSource, UICollect
         view.backgroundColor = UIColor(red:0.49, green:0.84, blue:0.87, alpha:1.0)
         view.addSubview(collectionView)
         navigationItem.title = "Order a New Beau"
-        
     }
-    //
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return data.count
     }

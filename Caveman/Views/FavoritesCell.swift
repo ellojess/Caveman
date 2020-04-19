@@ -38,7 +38,7 @@ class FavoritesCell: UICollectionViewCell {
     let title: UILabel = {
         let title = UILabel()
         title.translatesAutoresizingMaskIntoConstraints = false
-        title.textColor = UIColor(red:0.49, green:0.84, blue:0.87, alpha:1.0)
+        title.textColor = UIColor(red:1.00, green:0.59, blue:0.40, alpha:1.0)
         title.font = UIFont(name: "AvenirNext-Bold", size: 20)
         title.textAlignment = .center
         title.contentMode = .scaleAspectFit

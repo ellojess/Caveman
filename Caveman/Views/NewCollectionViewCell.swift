@@ -20,6 +20,7 @@ class NewCollectionViewCell: UICollectionViewCell {
         self.image.contentMode = .scaleAspectFit
         layer.cornerRadius = 12
         layer.masksToBounds = true
+        title.font = UIFont(name: "AvenirNext-Bold", size: 20)
     }
     
     public func setUp(with model: New) {
