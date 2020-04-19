@@ -38,7 +38,7 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate{
     let pageControl: UIPageControl = {
         let pageControl = UIPageControl()
         pageControl.pageIndicatorTintColor = UIColor(red:1.00, green:1.00, blue:1.00, alpha:0.5)
-        pageControl.currentPageIndicatorTintColor = UIColor(red:1.00, green:1.00, blue:1.00, alpha:1.0)
+        pageControl.currentPageIndicatorTintColor = UIColor(red:0.49, green:0.84, blue:0.87, alpha:1.0)
         pageControl.transform = CGAffineTransform(scaleX: 2, y: 2)
         pageControl.currentPage = 0
         pageControl.isUserInteractionEnabled = false

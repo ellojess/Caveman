@@ -47,7 +47,6 @@ class PastViewController: UIViewController, UITableViewDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setViews()
         setUpNavBar()
         setUpTableView()
         tableView.register(PastCell.self, forCellReuseIdentifier: "PastCell")
@@ -58,9 +57,6 @@ class PastViewController: UIViewController, UITableViewDelegate{
       super.loadView()
     }
     
-    func setViews(){
-        self.view.backgroundColor = UIColor(red:0.95, green:0.95, blue:0.95, alpha:1.0)
-    }
     
     func setUpNavBar(){
         self.navigationController?.navigationBar.isHidden = false

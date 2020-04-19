@@ -108,7 +108,7 @@ class LoginViewController: UIViewController{
         stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         stackView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
 
-        self.view.backgroundColor = UIColor(red:0.44, green:0.40, blue:1.00, alpha:1.0)
+        self.view.backgroundColor = UIColor(red:0.49, green:0.84, blue:0.87, alpha:1.0)
         
         stackView.addArrangedSubview(titleLabel)
         
