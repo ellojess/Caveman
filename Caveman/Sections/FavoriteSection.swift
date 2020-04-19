@@ -103,10 +103,14 @@ struct FavoriteSection: Section {
         collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: FavoritesCell.self), for: indexPath)
                 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavoritesCell", for: indexPath) as! FavoritesCell
-        cell.backgroundColor = UIColor(red:0.49, green:0.84, blue:0.87, alpha:1.0)
+        cell.backgroundColor = .white
         //rgb(255, 121, 121), rgb(255, 190, 118), rgb(149, 175, 192), rgb(126, 214, 223)
         // rgb to uicolor converter https://www.uicolor.xyz/#/rgb-to-ui
         cell.layer.cornerRadius = 10
+//        cell.layer.borderColor = UIColor.black.cgColor
+        cell.layer.borderColor = UIColor(red:0.49, green:0.84, blue:0.87, alpha:1.0).cgColor
+        cell.layer.borderWidth = 0.5
+        cell.clipsToBounds = true
         cell.data = self.data[indexPath.row]
         return cell
         
