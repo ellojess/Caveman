@@ -27,7 +27,6 @@ class NewCollectionViewCell: UICollectionViewCell {
         image.image = model.image
         title.text = model.title
     }
-
 }
 
 // layout grid for new order cells

@@ -66,10 +66,9 @@ class PastCell: UITableViewCell {
         title.textAlignment = .center
         
         stackView.addArrangedSubview(favoriteButton)
-        favoriteButton.isHidden = false //hello hello testing here
+        favoriteButton.isHidden = false
         favoriteButton.isUserInteractionEnabled = true
         favoriteButton.addTarget(self, action: #selector(favTapped), for: .touchDown)
-        
     }
     
     func setCellContents(item: Item){
@@ -96,11 +95,10 @@ class PastCell: UITableViewCell {
             })
             
             self.favoriteButton.setImage(UIImage(named: "favorite"), for: .normal)
-        }else{
+        } else {
             self.favoriteButton.setImage(UIImage(named: "unfavorite"), for: .normal)
         }
     }
-    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

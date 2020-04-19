@@ -68,13 +68,11 @@ class NewViewController: UIViewController, UICollectionViewDataSource, UICollect
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "newOrderCell", for: indexPath) as! NewCollectionViewCell
         
-        // Needs review, not changing colors when selected
         if indexPath == selectedIndexPath{
             cell.backgroundColor = UIColor(red:0.95, green:0.95, blue:0.95, alpha:1.0)
-        }else{
+        } else {
             cell.backgroundColor = UIColor(red:1.00, green:1.00, blue:1.00, alpha:0.5)
         }
-        
         cell.setUp(with: data[indexPath.row])
         return cell
     }

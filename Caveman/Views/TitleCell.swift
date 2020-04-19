@@ -22,14 +22,12 @@ class TitleCell: UICollectionViewCell {
     override init(frame: CGRect) {
         super.init(frame: .zero)
         
-        
         self.addSubview(titleLabel)
         
         titleLabel.topAnchor.constraint(equalTo:  contentView.topAnchor).isActive = true
         titleLabel.bottomAnchor.constraint(equalTo:  contentView.bottomAnchor).isActive = true
         titleLabel.trailingAnchor.constraint(equalTo:  contentView.trailingAnchor, constant: 20).isActive = true
         titleLabel.leadingAnchor.constraint(equalTo:  contentView.leadingAnchor, constant: 20).isActive = true
-
     }
     
     required init?(coder: NSCoder) {
@@ -39,7 +37,4 @@ class TitleCell: UICollectionViewCell {
     func set(title: String) {
         titleLabel.text = title
     }
-    
-    
-    
 }

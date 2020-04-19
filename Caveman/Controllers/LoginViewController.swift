@@ -56,27 +56,29 @@ class LoginViewController: UIViewController{
         attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         usernameTextField.font = UIFont(name: "AvenirNextCondensed-DemiBold", size: 18)
         usernameTextField.textColor = .white
-        usernameTextField.borderStyle = .none
+        usernameTextField.translatesAutoresizingMaskIntoConstraints = false
+        usernameTextField.addSubview(bottomLine)
+        
         bottomLine.translatesAutoresizingMaskIntoConstraints = false
         bottomLine.backgroundColor = .white
-        usernameTextField.addSubview(bottomLine)
         bottomLine.topAnchor.constraint(equalTo: usernameTextField.bottomAnchor, constant: -10).isActive = true
         bottomLine.leadingAnchor.constraint(equalTo: usernameTextField.leadingAnchor).isActive = true
         bottomLine.trailingAnchor.constraint(equalTo: usernameTextField.trailingAnchor).isActive = true
         bottomLine.heightAnchor.constraint(equalToConstant: 1.0).isActive = true
-        usernameTextField.translatesAutoresizingMaskIntoConstraints = false
         return usernameTextField
     }()
     
     let passwordTextField: UITextField = {
         let passwordTextField = UITextField()
         let bottomLine = UIView()
+        
         passwordTextField.attributedPlaceholder = NSAttributedString(string: "Password",
         attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         passwordTextField.isSecureTextEntry = true
         passwordTextField.font = UIFont(name: "AvenirNextCondensed-DemiBold", size: 18)
         passwordTextField.textColor = .white
         passwordTextField.borderStyle = .none
+        
         bottomLine.translatesAutoresizingMaskIntoConstraints = false
         bottomLine.backgroundColor = .white
         passwordTextField.addSubview(bottomLine)
@@ -135,19 +137,7 @@ class LoginViewController: UIViewController{
         loginButton.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
     }
     
-    // TODO: Animate title label
-
-//    @objc func continueButtonTapped(){
-//        print("continue")
-//        let loginViewController: LoginViewController = LoginViewController()
-//        self.navigationController?.pushViewController(loginViewController, animated: true)
-//    }
-    
-    
     @objc func loginButtonTapped(){
-        print("login pressed")
-//        let homeViewController: HomeViewController = HomeViewController()
-//        self.navigationController?.pushViewController(homeViewController, animated: true)
         let tabBarVC: TabBarController = TabBarController()
         self.navigationController?.pushViewController(tabBarVC, animated: true)
     }

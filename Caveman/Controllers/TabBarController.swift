@@ -24,7 +24,6 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate{
         setupTabBarIcons()
         self.delegate = self
         self.tabBar.tintColor = UIColor(red:0.49, green:0.84, blue:0.87, alpha:1.0)
-
     }
     
     func setupViewControllers(){
@@ -72,10 +71,6 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate{
         self.fourthItemImageView.contentMode = .center
     }
     
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        print("Selected a new view controller")
-
-    }
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         if item.tag == 0{

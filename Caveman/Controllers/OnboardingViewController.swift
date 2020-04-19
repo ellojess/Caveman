@@ -10,7 +10,6 @@ import UIKit
 
 class OnboardingViewController: UIViewController, UIScrollViewDelegate{
     
-    
     var firstView: OnboardingView!
     var secondView: OnboardingView!
     var thirdView: OnboardingView!
@@ -86,7 +85,6 @@ class OnboardingViewController: UIViewController, UIScrollViewDelegate{
     }
     
     @objc func continueButtonTapped(){
-        print("continue")
         let loginViewController: LoginViewController = LoginViewController()
         self.navigationController?.pushViewController(loginViewController, animated: true)
     }

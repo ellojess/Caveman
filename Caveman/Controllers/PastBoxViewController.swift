@@ -55,8 +55,6 @@ class PastBoxViewController: UIViewController {
             boxItems.append(item)
         }
     }
-    
-
 }
 
 extension PastBoxViewController: UITableViewDataSource, UITableViewDelegate {
@@ -70,6 +68,4 @@ extension PastBoxViewController: UITableViewDataSource, UITableViewDelegate {
         cell.selectionStyle = .none
         return cell
     }
-    
-    
 }

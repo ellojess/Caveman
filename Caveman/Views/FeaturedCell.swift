@@ -48,10 +48,10 @@ class FeaturedCell: UICollectionViewCell {
         super.init(frame: .zero)
         contentView.addSubview(stackView)
         
-        stackView.widthAnchor.constraint(equalTo:  contentView.widthAnchor, multiplier: 0.80).isActive = true
-        stackView.heightAnchor.constraint(equalTo:  contentView.heightAnchor, multiplier: 0.70).isActive = true
-        stackView.centerXAnchor.constraint(equalTo:  contentView.centerXAnchor).isActive = true
-        stackView.centerYAnchor.constraint(equalTo:  contentView.centerYAnchor).isActive = true
+        stackView.widthAnchor.constraint(equalTo: contentView.widthAnchor, multiplier: 0.80).isActive = true
+        stackView.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.70).isActive = true
+        stackView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor).isActive = true
+        stackView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor).isActive = true
 
         stackView.addArrangedSubview(image)
         image.heightAnchor.constraint(equalTo: stackView.heightAnchor, multiplier: 0.75).isActive = true

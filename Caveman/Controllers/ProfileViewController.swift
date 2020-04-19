@@ -83,7 +83,6 @@ struct CircleImage_Preview: PreviewProvider {
 }
 
 // Map View
-
 struct MapView: UIViewRepresentable {
     func makeUIView(context: Context) -> MKMapView {
         MKMapView(frame: .zero)

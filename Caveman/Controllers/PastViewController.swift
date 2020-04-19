@@ -24,7 +24,6 @@ class PastViewController: UIViewController, UITableViewDelegate{
         }()
     
     func getItems() {
-    // list of items
     let artistman = Item(title: "Mr Artsy Fartsy", image: UIImage(named: "artistman")!)
     let workoutman = Item(title: "Sir Activity", image: UIImage(named: "workoutman")!)
     let dancingman = Item(title: "Happy Feet", image: UIImage(named: "dancingman")!)
@@ -57,7 +56,6 @@ class PastViewController: UIViewController, UITableViewDelegate{
       super.loadView()
     }
     
-    
     func setUpNavBar(){
         self.navigationController?.navigationBar.isHidden = false
         self.navigationController?.navigationBar.prefersLargeTitles = true
@@ -78,7 +76,6 @@ class PastViewController: UIViewController, UITableViewDelegate{
         tableView.delegate = self
         tableView.dataSource = self
     }
-    
 }
 
 extension PastViewController: UITableViewDataSource {

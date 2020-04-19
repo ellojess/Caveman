@@ -57,7 +57,6 @@ class FavoritesCell: UICollectionViewCell {
 
         stackView.addArrangedSubview(image)
         image.heightAnchor.constraint(equalTo: stackView.heightAnchor, multiplier: 0.75).isActive = true
-
     }
     
     required init?(coder: NSCoder) {

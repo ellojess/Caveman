@@ -45,12 +45,10 @@ struct FeaturedSection: Section {
                 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FeaturedCell", for: indexPath) as! FeaturedCell
         cell.backgroundColor = UIColor(red:1.00, green:0.59, blue:0.40, alpha:1.0)
-        //rgb(255, 121, 121), rgb(255, 190, 118), rgb(149, 175, 192), rgb(126, 214, 223)
-        // rgb to uicolor converter https://www.uicolor.xyz/#/rgb-to-ui
         cell.layer.cornerRadius = 10
         cell.data = self.data[indexPath.row]
         return cell
-        
     }
-    
 }
+
+// rgb to uicolor converter https://www.uicolor.xyz/#/rgb-to-ui

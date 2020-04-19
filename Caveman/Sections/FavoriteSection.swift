@@ -22,8 +22,8 @@ struct FavoriteSection: Section {
         Fav(title: "Monsieur Supportive", image: UIImage(named: "thumbsupman")!),
         Fav(title: "Stargazer", image: UIImage(named: "confusedspaceman")!)
     ]
-    
         
+    
     func layoutSection() -> NSCollectionLayoutSection? {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
         
@@ -31,7 +31,6 @@ struct FavoriteSection: Section {
         
         let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(0.95), heightDimension: .fractionalHeight(0.35))
         
-//        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
         let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitem: item, count: 3)
         
         let section = NSCollectionLayoutSection(group: group)
@@ -46,16 +45,13 @@ struct FavoriteSection: Section {
                 
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FavoritesCell", for: indexPath) as! FavoritesCell
         cell.backgroundColor = .white
-        //rgb(255, 121, 121), rgb(255, 190, 118), rgb(149, 175, 192), rgb(126, 214, 223)
-        // rgb to uicolor converter https://www.uicolor.xyz/#/rgb-to-ui
         cell.layer.cornerRadius = 10
-//        cell.layer.borderColor = UIColor.black.cgColor
         cell.layer.borderColor = UIColor(red:0.49, green:0.84, blue:0.87, alpha:1.0).cgColor
         cell.layer.borderWidth = 0.5
         cell.clipsToBounds = true
         cell.data = self.data[indexPath.row]
         return cell
-        
     }
-    
 }
+
+// rgb to uicolor converter https://www.uicolor.xyz/#/rgb-to-ui

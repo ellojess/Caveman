@@ -27,7 +27,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate{
         return layout
     }()
     
-        
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.title = "Home"
