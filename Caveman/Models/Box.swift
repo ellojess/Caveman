@@ -30,3 +30,8 @@ struct New{
     var image: UIImage
 }
 
+struct Fav{
+    var title: String
+    var image: UIImage
+}
+

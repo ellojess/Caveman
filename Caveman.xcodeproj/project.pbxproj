@@ -10,7 +10,6 @@
 		C02E1C76242E92E9009E95BE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = C02E1C75242E92E9009E95BE /* Alamofire */; };
 		C0308163241E431400557CB7 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0308162241E431400557CB7 /* TabBarController.swift */; };
 		C0308168241F3D1C00557CB7 /* FavoritesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0308166241F3D1C00557CB7 /* FavoritesCell.swift */; };
-		C0308169241F3D1C00557CB7 /* FavoritesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0308167241F3D1C00557CB7 /* FavoritesCell.xib */; };
 		C030816B241F4FEC00557CB7 /* PastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C030816A241F4FEC00557CB7 /* PastViewController.swift */; };
 		C030816D241F505D00557CB7 /* PastCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C030816C241F505D00557CB7 /* PastCell.swift */; };
 		C030816F241F572800557CB7 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C030816E241F572800557CB7 /* NewViewController.swift */; };
@@ -38,7 +37,6 @@
 /* Begin PBXFileReference section */
 		C0308162241E431400557CB7 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		C0308166241F3D1C00557CB7 /* FavoritesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesCell.swift; sourceTree = "<group>"; };
-		C0308167241F3D1C00557CB7 /* FavoritesCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoritesCell.xib; sourceTree = "<group>"; };
 		C030816A241F4FEC00557CB7 /* PastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastViewController.swift; sourceTree = "<group>"; };
 		C030816C241F505D00557CB7 /* PastCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastCell.swift; sourceTree = "<group>"; };
 		C030816E241F572800557CB7 /* NewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
@@ -131,7 +129,6 @@
 				C04467B8241CDBF50019006E /* TitleCell.swift */,
 				C04467BC241CE41F0019006E /* FeaturedCell.swift */,
 				C0308166241F3D1C00557CB7 /* FavoritesCell.swift */,
-				C0308167241F3D1C00557CB7 /* FavoritesCell.xib */,
 				C030816C241F505D00557CB7 /* PastCell.swift */,
 				C030817624201BC900557CB7 /* NewCollectionViewCell.swift */,
 				C030817724201BC900557CB7 /* NewCollectionViewCell.xib */,
@@ -224,7 +221,6 @@
 			files = (
 				C044679F241AC8650019006E /* LaunchScreen.storyboard in Resources */,
 				C044679C241AC8650019006E /* Assets.xcassets in Resources */,
-				C0308169241F3D1C00557CB7 /* FavoritesCell.xib in Resources */,
 				C030817924201BC900557CB7 /* NewCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
